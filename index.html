@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>UGraphs</title>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS imports -->
+
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+        <!-- Font-awesome CSS-->
+        <link href="css/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" >
+        
+        <!-- File-input-master CSS-->
+        <link href="css/fileinput.min.css" rel="stylesheet" >
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse navbar-static-top top-bar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="">UGraphs</a>
+                    </div> <!--navbar header closure-->
+
+                </div> <!--Container closure-->
+            </nav>
+
+
+
+        </header>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-header">
+                        <h1>Visualize your graphs <small><a href="https://github.com/TeamUgalde/UGraphs"><i id="github-icon" class="fa fa-github"></i> Source Code</a></small></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-8 col-md-offset-2">
+                    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                        <li class="active"><a href="#text-input" data-toggle="tab">Text Input</a></li>
+                        <li><a href="#file-input" data-toggle="tab">File Upload</a></li>
+                    </ul>
+
+                    <div id="my-tab-content" class="tab-content">
+                        <div class="tab-pane active" id="text-input">
+                            <form id="text-input-form" method="post">
+                                <div class="form-group">
+                                    <label for="text-json">JSON:</label>
+                                    <textarea class="form-control" rows="15" id="text-json"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-default pull-right">Submit</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="file-input">
+                            <form id="file-input-form" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <input id="file-0a" class="file" type="file-json" multiple data-min-file-count="3">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- JavaScript imports -->
+
+        <!-- jQuery Version 2.1.1 -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap filestyle JavaScript -->
+        <script src="js/bootstrap-filestyle.min.js"></script>
+        
+        <!-- File-input-master JavaScript -->
+        <script src="js/fileinput.min.js"></script>
+
+        <!-- D3 Core JS -->
+        <script src="js/d3.min.js"></script>
+
+        <!-- Index js -->
+        <script src="js/index.js"></script>
+
+
+    </body>
+</html>
