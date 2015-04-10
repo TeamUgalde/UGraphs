@@ -9,14 +9,15 @@ $(document).ready(function() {
         $('#input-file-button').css('display','block');
     });
 
-
-
     /*When the submit button is clicked to send the Text JSON input*/
     $('#input-text-button').click(function() {
         var jsonInput = $("#text-json").val();
         if (jsonInput != '' && validJSON(jsonInput)) {
+            $(".graph-container").css("display", "block");
+            $(".input-container").css("display", "none");
             var jsonObject = JSON.parse(jsonInput);
-            convertJSON(jsonObject);
+            var parsedJSON = convertJSON(jsonObject);
+            displayGraph(parsedJSON);
         }else{
             $(".json-alert1").show();
         }
@@ -105,8 +106,8 @@ $(document).ready(function() {
         }
         newGraph["links"] = newLinks;
         newGraph["nodes"] = newNodes;
+        return newGraph;
     }
-    
     
     function getNodeNumber(nodeName) {
         return parseInt(nodeName.substr(4));

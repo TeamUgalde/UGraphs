@@ -3,7 +3,20 @@
 }
 
 .graph-container {
+    height: 500px;
     display: none;
+    border: 5px solid #C1C0C1;
+    box-sizing: border-box;
+}
+
+.graph-row {
+    height: 100%;
+    width: 100%;
+}
+
+.graph-columns {
+    height: 100%;
+    width: 100%;
 }
 
 .json-alert1, .json-alert2 {
