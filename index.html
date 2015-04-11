@@ -16,7 +16,7 @@
 
         <!-- Main index styles CSS -->
         <link href="css/mainStyles.css" rel="stylesheet" >
-        
+
         <!-- Graph styles CSS -->
         <link href="css/graphStyles.css" rel="stylesheet" >
 
@@ -66,15 +66,15 @@
 
                                 <label for="text-json">JSON:</label>
                                 <textarea placeholder="Example:
-{
-    &quot;node1&quot; : { &quot;name&quot;: &quot;Node1&quot;, &quot;description&quot;: &quot;Desc1&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node2&quot;] },
-    &quot;node2&quot; : { &quot;name&quot;: &quot;Node2&quot;, &quot;description&quot;: &quot;Desc2&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node3&quot;, &quot;node4&quot;] },
-    &quot;node3&quot; : { &quot;name&quot;: &quot;Node3&quot;, &quot;description&quot;: &quot;Desc3&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node5&quot;, &quot;node6&quot;] },
-    &quot;node4&quot; : { &quot;name&quot;: &quot;Node4&quot;, &quot;description&quot;: &quot;Desc4&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
-    &quot;node5&quot; : { &quot;name&quot;: &quot;Node5&quot;, &quot;description&quot;: &quot;Desc5&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node7&quot;] },
-    &quot;node6&quot; : { &quot;name&quot;: &quot;Node6&quot;, &quot;description&quot;: &quot;Desc6&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
-    &quot;node7&quot; : { &quot;name&quot;: &quot;Node7&quot;, &quot;description&quot;: &quot;Desc7&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] }
-}" class="form-control" rows="15" id="text-json"></textarea>
+                                                       {
+                                                       &quot;node1&quot; : { &quot;name&quot;: &quot;Node1&quot;, &quot;description&quot;: &quot;Desc1&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node2&quot;] },
+                                                       &quot;node2&quot; : { &quot;name&quot;: &quot;Node2&quot;, &quot;description&quot;: &quot;Desc2&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node3&quot;, &quot;node4&quot;] },
+                                                       &quot;node3&quot; : { &quot;name&quot;: &quot;Node3&quot;, &quot;description&quot;: &quot;Desc3&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node5&quot;, &quot;node6&quot;] },
+                                                       &quot;node4&quot; : { &quot;name&quot;: &quot;Node4&quot;, &quot;description&quot;: &quot;Desc4&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
+                                                       &quot;node5&quot; : { &quot;name&quot;: &quot;Node5&quot;, &quot;description&quot;: &quot;Desc5&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node7&quot;] },
+                                                       &quot;node6&quot; : { &quot;name&quot;: &quot;Node6&quot;, &quot;description&quot;: &quot;Desc6&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
+                                                       &quot;node7&quot; : { &quot;name&quot;: &quot;Node7&quot;, &quot;description&quot;: &quot;Desc7&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] }
+                                                       }" class="form-control" rows="15" id="text-json"></textarea>
                                 <button id="input-text-button" class="btn btn-lg btn-default pull-right">Submit</button>
                             </section>
                         </div>
@@ -97,19 +97,16 @@
         </div>
 
         <div class="container graph-container">
-
-            <div class="row">
-
-                <div class="col-md-10 col-md-offset-1">
-                    <div id="prueba">
-
+            <div class="graph-row">
+                <div class="graph-columns">
+                    <div class="graph">
+                        <div class="control-zoom">
+                            <a class="control-zoom-in" href="#" title="Zoom in"></a>
+                            <a class="control-zoom-out" href="#" title="Zoom out"></a>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
-
         </div>
 
 
@@ -127,9 +124,14 @@
         <!-- D3 Core JS -->
         <script src="js/d3.min.js"></script>
 
+        <!-- Underscore JS -->
+        <script src="js/underscore-min.js"></script>
+
+        <!-- Graph JS -->
+        <script src="js/graph.js"></script>
+
         <!-- Index js -->
         <script src="js/index.js"></script>
-
 
     </body>
 </html>
