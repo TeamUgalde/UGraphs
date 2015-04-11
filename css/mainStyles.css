@@ -1,0 +1,21 @@
+.ugraph-form {
+    padding-top: 20px;
+}
+
+.graph-container {
+    display: none;
+}
+
+.json-alert1, .json-alert2 {
+    display: none;
+}
+
+#input-text-button{
+    margin-top: 10px;
+}
+
+#input-file-button  {
+    margin: 0 auto;
+    margin-top: 25px;
+    display: none;
+}
