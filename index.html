@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>UGraphs</title>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS imports -->
+
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+        <!-- Font-awesome CSS-->
+        <link href="css/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" >
+
+        <!-- Main index styles CSS -->
+        <link href="css/mainStyles.css" rel="stylesheet" >
+        
+        <!-- Graph styles CSS -->
+        <link href="css/graphStyles.css" rel="stylesheet" >
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse navbar-static-top top-bar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="">UGraphs</a>
+                    </div> <!--navbar header closure-->
+
+                </div> <!--Container closure-->
+            </nav>
+
+
+
+        </header>
+
+        <div class="container input-container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-header">
+                        <h3>Visualize your graphs <small><a href="https://github.com/TeamUgalde/UGraphs"><i id="github-icon" class="fa fa-github"></i> Source Code</a></small></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-8 col-md-offset-2">
+                    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                        <li class="active"><a href="#text-input" data-toggle="tab">Text Input</a></li>
+                        <li><a href="#file-input" data-toggle="tab">File Upload</a></li>
+                    </ul>
+
+                    <div id="my-tab-content" class="tab-content">
+                        <div class="tab-pane active" id="text-input">
+                            <section class="ugraph-form">
+
+                                <div class="json-alert1 alert alert-danger" role="alert">
+                                    <button type="button" id="close1" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Warning!</strong> Invalid JSON. Try again!
+                                </div>
+
+                                <label for="text-json">JSON:</label>
+                                <textarea placeholder="Example:
+{
+    &quot;node1&quot; : { &quot;name&quot;: &quot;Node1&quot;, &quot;description&quot;: &quot;Desc1&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node2&quot;] },
+    &quot;node2&quot; : { &quot;name&quot;: &quot;Node2&quot;, &quot;description&quot;: &quot;Desc2&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node3&quot;, &quot;node4&quot;] },
+    &quot;node3&quot; : { &quot;name&quot;: &quot;Node3&quot;, &quot;description&quot;: &quot;Desc3&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node5&quot;, &quot;node6&quot;] },
+    &quot;node4&quot; : { &quot;name&quot;: &quot;Node4&quot;, &quot;description&quot;: &quot;Desc4&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
+    &quot;node5&quot; : { &quot;name&quot;: &quot;Node5&quot;, &quot;description&quot;: &quot;Desc5&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[&quot;node7&quot;] },
+    &quot;node6&quot; : { &quot;name&quot;: &quot;Node6&quot;, &quot;description&quot;: &quot;Desc6&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] },
+    &quot;node7&quot; : { &quot;name&quot;: &quot;Node7&quot;, &quot;description&quot;: &quot;Desc7&quot;, &quot;link&quot;: &quot;#&quot;, &quot;connectsTo&quot;:[] }
+}" class="form-control" rows="15" id="text-json"></textarea>
+                                <button id="input-text-button" class="btn btn-lg btn-default pull-right">Submit</button>
+                            </section>
+                        </div>
+                        <div class="tab-pane" id="file-input">
+                            <section class="ugraph-form">
+                                <div class="json-alert2 alert alert-danger" role="alert">
+                                    <button type="button" id="close2" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Warning!</strong> Invalid file, try with a JSON file.
+                                </div>
+                                <input id="json-input" type="file" class="filestyle" data-size="md" data-buttonName="btn-primary">
+                                <button id="input-file-button" class="btn btn-lg btn-default">Submit</button>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container graph-container">
+
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1">
+                    <div id="prueba">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- JavaScript imports -->
+
+        <!-- jQuery Version 2.1.1 -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- File-input-master JavaScript -->
+        <script src="js/bootstrap-filestyle.min.js"></script>
+
+        <!-- D3 Core JS -->
+        <script src="js/d3.min.js"></script>
+
+        <!-- Index js -->
+        <script src="js/index.js"></script>
+
+
+    </body>
+</html>

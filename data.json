@@ -1,0 +1,9 @@
+{
+    "node1" : { "name": "Node1", "description": "Desc1", "link": "#", "connectsTo":["node2"] },
+    "node2" : { "name": "Node2", "description": "Desc2", "link": "#", "connectsTo":["node3", "node4"] },
+    "node3" : { "name": "Node3", "description": "Desc3", "link": "#", "connectsTo":["node5", "node6"] },
+    "node4" : { "name": "Node4", "description": "Desc4", "link": "#", "connectsTo":[] },
+    "node5" : { "name": "Node5", "description": "Desc5", "link": "#", "connectsTo":["node7"] },
+    "node6" : { "name": "Node6", "description": "Desc6", "link": "#", "connectsTo":[] },
+    "node7" : { "name": "Node7", "description": "Desc7", "link": "#", "connectsTo":[] }
+}
