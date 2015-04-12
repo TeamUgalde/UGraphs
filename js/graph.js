@@ -116,8 +116,8 @@ function displayGraph(jsonObject) {
     }
 
     function resize() {
-        graphWidth = $(".graphContainer").width(),
-            graphHeight = $(".graphContainer").height();
+        graphWidth = $(".graph-container").width(),
+            graphHeight = $(".graph-container").height();
         graph.attr("width", graphWidth)
             .attr("height", graphHeight);
         layout.size([graphWidth, graphHeight])
