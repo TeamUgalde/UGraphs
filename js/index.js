@@ -109,6 +109,10 @@ $(document).ready(function() {
     function getNodeNumber(nodeName) {
         return parseInt(nodeName.substr(4));
     }
+    
+    $('.close-button').click(function() {
+        $('.node-info').css('display','none');
+    });
 
 });
 
