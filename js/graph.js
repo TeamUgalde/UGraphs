@@ -89,7 +89,7 @@ function displayGraph(jsonObject) {
         layout = d3.layout.force()
             .gravity(.05)
             .charge(-300)
-            .linkDistance(150);
+            .linkDistance(100);
 
         // Setup graph
         graph = d3.select(".graph")
@@ -116,8 +116,8 @@ function displayGraph(jsonObject) {
     }
 
     function resize() {
-        graphWidth = $(".graphContainer").width(),
-            graphHeight = $(".graphContainer").height();
+        graphWidth = $(".graph-container").width(),
+            graphHeight = $(".graph-container").height();
         graph.attr("width", graphWidth)
             .attr("height", graphHeight);
         layout.size([graphWidth, graphHeight])
@@ -165,7 +165,8 @@ function displayGraph(jsonObject) {
             .attr("class", function(d) { return formatClassName('circle', d) })
             .attr("r", 7)
             .on("mouseover", _.bind(onNodeMouseOver, this, nodes, links))
-            .on("mouseout", _.bind(onNodeMouseOut, this, nodes, links) );
+            .on("mouseout", _.bind(onNodeMouseOut, this, nodes, links) )
+            .on("click", _.bind(nodeClick, this, nodes, links));
 
         // A copy of the text with a thick white stroke for legibility.
         nodes.append("svg:text")
@@ -196,6 +197,13 @@ function displayGraph(jsonObject) {
         graph.transition()
             .duration(500)
             .attr("transform", "scale(" + zoom.scale() + ")");
+    }
+
+    function nodeClick(nodes, links, d) {
+        $('.node-link').html(d.id);
+        $('.node-link').attr('href', d.link);
+        $('.node-description').html(d.description);
+        $('.node-info').css('display','block');
     }
 
     function onNodeMouseOver(nodes, links, d) {
