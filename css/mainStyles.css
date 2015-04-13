@@ -1,0 +1,44 @@
+/*
+Universidad: Instituto Tecnologico de Costa Rica
+
+Authors:
+        Diego Ugalde Avila
+        Luis E. Ugalde Barrantes
+
+Styles for the main structure of the webpage. 
+*/
+
+.ugraph-form {
+    padding-top: 20px;
+}
+
+.graph-container {
+    height: 500px;
+    display: none;
+    border: 5px solid #C1C0C1;
+    box-sizing: border-box;
+}
+
+.graph-row {
+    height: 100%;
+    width: 100%;
+}
+
+.graph-columns {
+    height: 100%;
+    width: 100%;
+}
+
+.json-alert1, .json-alert2 {
+    display: none;
+}
+
+#input-text-button{
+    margin-top: 10px;
+}
+
+#input-file-button  {
+    margin: 0 auto;
+    margin-top: 25px;
+    display: none;
+}
