@@ -1,4 +1,10 @@
 /*
+Universidad Tecnologica de Costa Rica
+
+Authors:
+        Diego Ugalde Avila
+        Luis E. Ugalde Barrantes
+
 Javascript file which includes various functions used for graph visualization.
 */
 

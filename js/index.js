@@ -1,4 +1,10 @@
 /*
+Universidad Tecnologica de Costa Rica
+
+Authors:
+        Diego Ugalde Avila
+        Luis E. Ugalde Barrantes
+
 Various functions used in the main page (index).
 Includes: JSON processing, file reading & JSON converter
 */
