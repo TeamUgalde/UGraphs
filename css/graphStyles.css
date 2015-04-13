@@ -1,3 +1,7 @@
+/*
+General styles used for the graph container and everything it contains.
+*/
+
 .graph {
     position: relative;
     width:100%;

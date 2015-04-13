@@ -1,6 +1,9 @@
-$(document).ready(function() {
+/*
+Various functions used in the main page (index).
+Includes: JSON processing, file reading & JSON converter
+*/
 
-    /*Global variables*/
+$(document).ready(function() {
 
     $('#tabs').tab();
 
@@ -21,6 +24,7 @@ $(document).ready(function() {
         readFile(file, procesarJSON);
     });
 
+    // Function that's in charge of displaying the graph made out of the JSON file
     function procesarJSON(jsonInput) {
         if (jsonInput != '' && validJSON(jsonInput)) {
             $(".graph-container").css("display", "block");
@@ -33,6 +37,7 @@ $(document).ready(function() {
         }
     };
 
+    // Function used to read the file sent by the user
     function readFile(file, callback) {
         if(file.name.split('.').pop() != 'json') {
             $(".json-alert2").show();   
@@ -52,13 +57,13 @@ $(document).ready(function() {
 
     function checkJSON(jsonString) {
         if(validJSON(jsonString)) {
-            console.log("jola");
             jsonObject = JSON.parse(jsonString);
         }else{
             $(".json-alert2").show();
         }
     }
 
+    // Function in charge of validating JSON file.
     function validJSON(jsonInput) {
         return (/^[\],:{}\s]*$/.test(jsonInput.replace(/\\["\\\/bfnrtu]/g, '@').replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').replace(/(?:^|:|,)(?:\s*\[)+/g, '')));
     }
@@ -73,6 +78,7 @@ $(document).ready(function() {
         $(".json-alert2").hide(); 
     });
 
+    // Function used to convert the JSON file to the format needed for the graph
     function convertJSON(jsonObject) {
         var graphLength = Object.keys(jsonObject).length;
         var newGraph = {};
