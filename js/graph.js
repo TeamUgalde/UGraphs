@@ -1,3 +1,13 @@
+/*
+Universidad Tecnologica de Costa Rica
+
+Authors:
+        Diego Ugalde Avila
+        Luis E. Ugalde Barrantes
+
+Javascript file which includes various functions used for graph visualization.
+*/
+
 function displayGraph(jsonObject) {
 
     var url = 'data.json'
@@ -199,6 +209,7 @@ function displayGraph(jsonObject) {
             .attr("transform", "scale(" + zoom.scale() + ")");
     }
 
+    // Function to display detailed information for the node clicked. 
     function nodeClick(nodes, links, d) {
         $('.node-link').html(d.id);
         $('.node-link').attr('href', d.link);
@@ -206,6 +217,7 @@ function displayGraph(jsonObject) {
         $('.node-info').css('display','block');
     }
 
+    // Function that highlights a node when mouse is over it.
     function onNodeMouseOver(nodes, links, d) {
 
         // Highlight circle
@@ -216,6 +228,7 @@ function displayGraph(jsonObject) {
         fadeRelatedNodes(d, .05, nodes, links);
     }
 
+    // Function that restores nodes when mouse is no longer over one. 
     function onNodeMouseOut(nodes, links, d) {
 
         // Highlight circle
@@ -272,10 +285,11 @@ function displayGraph(jsonObject) {
 
     }
 
+    // Function used to scale graph when zoom is changed
     function onZoomChanged() {
         graph.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")");
     }
-
+    
     function onNodeMouseDown(d) {
         d.fixed = true;
         d3.select(this).classed("sticky", true);
