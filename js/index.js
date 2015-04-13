@@ -1,5 +1,5 @@
 /*
-Universidad Tecnologica de Costa Rica
+Universidad: Instituto Tecnologico de Costa Rica
 
 Authors:
         Diego Ugalde Avila
@@ -88,15 +88,20 @@ $(document).ready(function() {
     function convertJSON(jsonObject) {
         var graphLength = Object.keys(jsonObject).length;
         var newGraph = {};
+        var nodesIndex = [];
         var newNodes = [];
         var newLinks = [];
 
         newGraph["directed"] = "true";
         newGraph["multigraph"] = "false";
         newGraph["graph"] = [];
+        
+        for(var node in jsonObject) {
+            nodesIndex.push(node);  
+        }
 
-        for(var i = 1; i <= graphLength; i++) {
-            var currNode = jsonObject["node"+i];
+        for(var property in jsonObject) {
+            var currNode = jsonObject[property];
             var newNode = {};
             newNode["id"] = currNode["name"];
             newNode["description"] = currNode["description"];
@@ -104,10 +109,11 @@ $(document).ready(function() {
             newNodes.push(newNode);
 
             var currNodeLinks = currNode["connectsTo"];
-            for(var j = 0; j < currNodeLinks.length; j++) {
+            for(var i = 0; i < currNodeLinks.length; i++) {
+                currLink = currNodeLinks[i];
                 var link = {};
-                var source = i-1;
-                var target = getNodeNumber(currNodeLinks[j])-1;
+                var source = nodesIndex.indexOf(property);
+                var target = nodesIndex.indexOf(currLink);
                 link["source"] = source;
                 link["target"] = target;
                 newLinks.push(link);
